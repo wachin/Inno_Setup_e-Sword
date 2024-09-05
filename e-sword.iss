@@ -12,7 +12,7 @@ WizardStyle=modern
 ; Configuración de las imágenes en el instalador
 SetupIconFile=e-Sword.ico
 WizardImageFile=Tux_+_e-Sword.png
-WizardSmallImageFile=Mi_Señor_Jesús.png
+WizardSmallImageFile=Mi_Senor_Jesus.png
 
 [Files]
 ; Copia todo el contenido de la carpeta 'modulos' al directorio de instalación
@@ -25,11 +25,3 @@ Name: "{commondesktop}\e-Sword"; Filename: "{app}\e-Sword.exe"; IconFilename: "{
 [Run]
 ; Ejecutar e-Sword después de la instalación
 Filename: "{app}\e-Sword.exe"; Description: "Ejecutar e-Sword"; Flags: nowait postinstall skipifsilent
-
-[Code]
-; Código opcional para centrar la imagen del instalador
-procedure InitializeWizard;
-begin
-  WizardForm.WizardImage.Stretch := False;
-  WizardForm.WizardImage.Center := True;
-end;
